@@ -58,19 +58,66 @@ Optional. Max 1 page.
 %Write introduction here.
 
 \section{Background}
-In recent years, the use of artificial intelligence (AI) algorithms for matching has become prevalent in various domains, including job recruitment, dating platforms, and resource allocation. These algorithms aim to automate the process of connecting entities based on specific criteria, optimizing compatibility, or minimizing distance. However, there is growing concern about the potential biases and discriminatory outcomes that may arise from the use of such algorithms. It is crucial to address these concerns and develop fair-by-design algorithms that ensure fairness and mitigate discrimination in the matching process.
+In recent years, artificial intelligence (AI) systems have become pervasive in our society. From online product recommendations to healthcare, from industrial automation to autonomous vehicles, AI algorithms have become an integral part of many applications and services we use on a daily basis. These systems are capable of processing large amounts of data, recognizing complex patterns, and making autonomous decisions or supporting human decision-making.
+However, while AI offers countless opportunities and advantages, it also raises concerns about the impact it can have on society. In particular, the widespread adoption of AI algorithms has led to increased discussions about fairness and discrimination within these systems.
 
 \section{Fairness in AI}
-Fairness is a central concept when designing and implementing AI systems. It involves treating individuals fairly and avoiding unjust or biased outcomes based on characteristics such as race, gender, or socioeconomic status. In the context of matching algorithms, fairness aims to ensure that the allocation of resources or opportunities is equitable and does not favor or discriminate against certain individuals or groups.
+Fairness is a central concept when it comes to AI systems. It refers to the need to ensure that such systems are unbiased and non-discriminatory towards the individuals or groups they affect. This is particularly relevant when considering the broad penetration and impact of AI systems in our society.
+Fairness in AI systems can be approached from various perspectives. For example, when discussing fairness in hiring algorithms, it is crucial to ensure that hiring decisions are not influenced by gender bias or other personal characteristics. In resource allocation applications, such as educational scholarships, fairness implies that allocation decisions are based on merit and do not favor any specific group.
+The relevance of fairness in AI systems also extends to issues of transparency and accountability. It is important that AI algorithms are understandable and explainable so that individuals can understand how decisions affecting them are made and can challenge any discrimination or bias.
+Furthermore, fairness in AI systems has ethical and legal implications. Regulations such as the General Data Protection Regulation (GDPR) in the European Union require that automated decisions concerning individuals are subject to explanation, and anti-discrimination laws prohibit unfair discrimination based on protected characteristics such as race, gender, or religion.
 
 \subsection{Types of Fairness}
-There are various notions of fairness that can be considered when developing fair-by-design algorithms for matching. Some commonly discussed types include:
+
+In the context of artificial intelligence (AI) systems, there are several types of fairness that can be considered when developing algorithms that aim to ensure equitable distribution of resources or opportunities. The following are the main types of fairness:
+
+\subsection{Statistical Fairness}
+Statistical fairness is a critical concept in ensuring fairness in artificial intelligence (AI) systems. It aims to address the issue of disparate impacts on different demographic groups or protected categories when using AI algorithms. The goal of statistical fairness is to ensure that the outcomes produced by an AI algorithm are distributed fairly across these groups.
+
+To achieve statistical fairness, it is important to examine the distribution of outcomes among different groups and identify any disparities. This can be done by analyzing the data used to train the AI algorithm and evaluating the resulting predictions or decisions.
+
+There are several metrics and approaches that can be used to measure statistical fairness. These include:
+
+\subsection{Disparate Impact}
+
+Disparate impact is a commonly used metric to assess statistical fairness. It measures the ratio of the outcomes between different groups. If the ratio is close to 1, it indicates a fair distribution, while a ratio significantly different from 1 suggests a potential bias. For example, in the context of loan approval, if the approval rates for different racial or ethnic groups vary significantly, it may indicate a disparate impact.
+
+\subsection{Equalized Odds}
+
+Equalized odds is another approach to statistical fairness that focuses on ensuring equal error rates across different groups. It requires that the true positive rates and false positive rates are similar for all groups. By achieving equalized odds, the algorithm aims to avoid privileging one group over another in terms of either false positives or false negatives. This approach is commonly used in applications such as criminal justice, where it is crucial to avoid both false convictions and false acquittals.
+
+\subsection{Conditional Demographic Disparity}
+
+Conditional demographic disparity is a metric that takes into account the demographic characteristics of individuals in relation to the predicted outcomes. It measures the difference in outcomes between different groups, considering individual attributes such as race, gender, or age. This metric allows for a more nuanced evaluation of fairness, as it considers how outcomes vary based on specific characteristics.
+
+\subsection{Fairness-aware Algorithms}
+
+To achieve statistical fairness, researchers and practitioners have developed fairness-aware algorithms. These algorithms aim to mitigate bias and disparities in the outcomes of AI systems by incorporating fairness constraints or objectives into the algorithm's optimization process. Fairness-aware algorithms seek to strike a balance between fairness and accuracy, ensuring that the predictions or decisions are both unbiased and effective.
+
+However, it is important to note that achieving statistical fairness can be challenging. There may be trade-offs between fairness and other desirable properties, such as accuracy or efficiency. Balancing these trade-offs requires careful consideration and decision-making.
+
+\subsection{Individual Fairness}
+Individual fairness focuses on treating individuals with similar characteristics equally. The fundamental idea is that two individuals with similar features should receive similar treatment from the AI algorithm. For instance, in a personnel selection algorithm, individual fairness demands that two candidates with similar skills and qualifications have similar probabilities of being selected.
+
+\subsection{Group Fairness}
+Group fairness refers to equity in the treatment of specific groups of individuals defined by protected characteristics such as race, gender, or religion. The goal is to ensure that members of these groups have equal opportunities or benefits compared to other groups. For example, in an educational resource allocation algorithm, group fairness requires that each group has a fair share of allocated resources.
+
+\subsection{Other Notions of Fairness}
+In addition to the aforementioned types of fairness, there are other notions of fairness that can be considered in specific contexts. These include:
 
 \begin{itemize}
-    \item \textbf{Statistical Fairness}: This refers to ensuring that the outcomes of the matching process are statistically equitable across different groups. For example, an algorithm should not consistently favor one group over another in terms of resource allocation.
-    \item \textbf{Individual Fairness}: Individual fairness focuses on treating similar individuals similarly. It aims to ensure that individuals who have similar characteristics or qualifications receive similar opportunities or resources.
-    \item \textbf{Group Fairness}: Group fairness is concerned with ensuring that certain predefined groups receive equitable treatment in the matching process. This can involve equal representation or distribution of opportunities among different groups.
+    \item \textbf{Temporal Fairness}: Temporal fairness refers to the stability of decisions made over time. For instance, if an AI algorithm makes different decisions for the same individuals at different times, it may be deemed unfair.
+
+    \item \textbf{Causal Fairness}: Causal fairness focuses on the causal effects of decisions made by AI algorithms. It aims to ensure that decisions do not perpetuate or amplify existing inequalities.
+
+    \item \textbf{Process Fairness}: Process fairness pertains to the transparency and accessibility of the decision-making process of AI algorithms. It involves ensuring that the decision-making process is fair and comprehensible to individuals impacted by it.
+
+    \item \textbf{Interpretability Fairness}: Interpretability fairness concerns the transparency and interpretability of AI algorithms. It involves making the decision-making process of AI systems interpretable to stakeholders and affected individuals, thereby promoting fairness.
+
+    \item \textbf{Procedural Fairness}: Procedural fairness focuses on the fairness of the procedures followed in designing, training, and deploying AI algorithms. It involves ensuring that the entire process is fair, inclusive, and representative.
+
 \end{itemize}
+
 
 \section{Matching Algorithms}
 Matching algorithms play a crucial role in various applications of AI. They involve the assignment of resources, individuals, or opportunities to optimize specific objectives. Common types of matching algorithms include the stable marriage algorithm, bipartite graph matching, and recommendation systems. These algorithms often rely on historical data or user preferences to make matches, which can introduce biases and perpetuate existing societal inequalities.
